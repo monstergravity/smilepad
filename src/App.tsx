@@ -97,11 +97,7 @@ function LockIcon({ className = '' }: { className?: string }) {
 }
 
 function SmileMark() {
-  return (
-    <span className="smile-mark" aria-hidden="true">
-      <span />
-    </span>
-  );
+  return <img className="smile-mark" src="/assets/smilepad-smile-mark.svg" width="512" height="512" alt="" aria-hidden="true" />;
 }
 
 function Logo() {

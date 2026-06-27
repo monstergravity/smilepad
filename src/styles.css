@@ -103,11 +103,11 @@ svg {
 
 .logo {
   display: inline-grid;
-  grid-template-columns: 44px auto 18px;
+  grid-template-columns: 42px auto 18px;
   grid-template-rows: auto auto;
   width: fit-content;
   align-items: center;
-  column-gap: 9px;
+  column-gap: 10px;
 }
 
 .logo-word {
@@ -133,57 +133,9 @@ svg {
 }
 
 .smile-mark {
-  position: relative;
-  width: 44px;
-  height: 32px;
-}
-
-.smile-mark::before,
-.smile-mark::after {
-  position: absolute;
-  top: 7px;
-  width: 7px;
-  height: 14px;
-  content: '';
-  border-radius: 999px;
-  background: var(--ink);
-}
-
-.smile-mark::before {
-  left: 12px;
-}
-
-.smile-mark::after {
-  right: 12px;
-}
-
-.smile-mark span {
-  position: absolute;
-  left: 8px;
-  bottom: 3px;
-  width: 28px;
-  height: 15px;
-  border-bottom: 4px solid var(--ink);
-  border-radius: 0 0 999px 999px;
-}
-
-.smile-mark span::before,
-.smile-mark span::after {
-  position: absolute;
-  top: 1px;
-  width: 11px;
-  height: 7px;
-  content: '';
-  border-radius: 999px;
-  background: #ff91ae;
-}
-
-.smile-mark span::before {
-  left: -10px;
-}
-
-.smile-mark span::after {
-  right: -10px;
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
 }
 
 .site-header nav {
@@ -552,26 +504,8 @@ svg {
 
 .kit-art .smile-mark {
   z-index: 2;
-  width: 70px;
-  height: 58px;
-  border-radius: 18px;
-  background: var(--pink-100);
-}
-
-.kit-art .smile-mark::before {
-  left: 22px;
-  top: 13px;
-}
-
-.kit-art .smile-mark::after {
-  right: 22px;
-  top: 13px;
-}
-
-.kit-art .smile-mark span {
-  left: 16px;
-  bottom: 11px;
-  width: 38px;
+  width: 74px;
+  height: 74px;
 }
 
 .kit-art > svg {
@@ -814,8 +748,8 @@ svg {
   }
 
   .logo {
-    grid-template-columns: 38px auto 14px;
-    column-gap: 6px;
+    grid-template-columns: 36px auto 14px;
+    column-gap: 7px;
   }
 
   .logo-word {
@@ -831,21 +765,8 @@ svg {
   }
 
   .smile-mark {
-    width: 38px;
-    height: 30px;
-  }
-
-  .smile-mark::before {
-    left: 10px;
-  }
-
-  .smile-mark::after {
-    right: 10px;
-  }
-
-  .smile-mark span {
-    left: 7px;
-    width: 24px;
+    width: 36px;
+    height: 36px;
   }
 
   .header-cta {
