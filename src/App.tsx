@@ -1,4 +1,5 @@
 import { FormEvent, useMemo, useState } from 'react';
+import { emailPatternSource, isValidEmail } from './lib/emailValidation';
 import { isSupabaseConfigured, supabase } from './lib/supabase';
 
 type FormState = 'idle' | 'loading' | 'success' | 'error';
@@ -7,8 +8,6 @@ type WaitlistFormProps = {
   compact?: boolean;
   label: string;
 };
-
-const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 function HeartIcon({ className = '' }: { className?: string }) {
   return (
@@ -126,9 +125,9 @@ function WaitlistForm({ compact = false, label }: WaitlistFormProps) {
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    if (!emailPattern.test(normalizedEmail)) {
+    if (!isValidEmail(normalizedEmail)) {
       setState('error');
-      setMessage('Please enter a valid parent or caregiver email.');
+      setMessage('Please enter a valid email, like name@example.com.');
       return;
     }
 
@@ -173,6 +172,7 @@ function WaitlistForm({ compact = false, label }: WaitlistFormProps) {
           type="email"
           inputMode="email"
           autoComplete="email"
+          pattern={emailPatternSource}
           placeholder="Parent or caregiver email"
           value={email}
           onChange={(event) => {
